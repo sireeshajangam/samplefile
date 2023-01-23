@@ -1,5 +1,5 @@
 name: Build and push image to ECR
-on: push
+on: [push,pull]
 jobs:
   build:
     name: Build Image
