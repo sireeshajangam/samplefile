@@ -10,7 +10,7 @@ jobs:
      run: sudo apt install python<3.10>
    - name: Run Test
      run: run main.py
-  deploy:
+ deploy:
    needs: test
    runs-on: ubuntu-latest
    steps:
