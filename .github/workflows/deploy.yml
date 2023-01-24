@@ -1,3 +1,4 @@
+1
 name: Terraform-GitHub-Actions
 on:
   push:
@@ -32,3 +33,5 @@ jobs:
       - name: Terraform apply
         id: apply
         run: terraform apply --auto-approve
+
+        

@@ -1,10 +1,10 @@
 provider "aws" {
   region = "ap-south-1"
 }
-resource "aws_instance" "varam" {
+resource "aws_instance" "Siri" {
   ami           = "ami-06984ea821ac0a879"
   instance_type = "t2.micro"
-  key_name = "terra"
+  key_name = "siri"
   tags = {
     Name = "Demo1"
   }
