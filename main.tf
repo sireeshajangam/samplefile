@@ -4,7 +4,7 @@ provider "aws" {
 resource "aws_instance" "Siri" {
   ami           = "ami-06984ea821ac0a879"
   instance_type = "t2.micro"
-  key_name = "siri"
+  key_name = "meenu"
   tags = {
     Name = "Demo1"
   }
