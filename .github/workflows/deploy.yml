@@ -54,7 +54,4 @@ jobs:
       - name: Terraform apply
         id: apply
         run: terraform apply --auto-approve 
-      - name: pulling image from ECR
-        run: |
-          docker pull $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG  
-          docker run  $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG 
+     
