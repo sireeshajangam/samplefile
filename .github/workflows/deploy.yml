@@ -52,7 +52,6 @@ jobs:
         id: apply
         run: terraform apply --auto-approve 
       - name: Deploy Docker Image to EC2
-      - name: pull image from ecr
         uses: appleboy/ssh-action@master
         with:
          host: ${{ env.SERVER_PUBLIC_IP }}
