@@ -6,7 +6,7 @@ resource "aws_instance" "Varam" {
   instance_type = "t2.micro"
   key_name = "vara"
   tags = {
-    Name = "Demo1"
+    Name = "siri"
   }
 }
 
