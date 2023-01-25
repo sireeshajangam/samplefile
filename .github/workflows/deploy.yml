@@ -48,7 +48,14 @@ jobs:
       - name: Terraform apply
         id: apply
         run: terraform apply --auto-approve 
-      
+      - name: pulling an image from ECR
+        uses: appleboy/ssh-action@master
+        host: ec2-52-91-116-204.compute-1.amazonaws.com
+        username: siri
+        key: ${{ secrets.ACTIONS_PRIVATE_KEY }}
+        #envs: GITHUB_SHA
+        script: |
+            docker pull  $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
           
      
