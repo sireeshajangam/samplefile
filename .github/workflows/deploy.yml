@@ -52,10 +52,11 @@ jobs:
         run: terraform apply --auto-approve 
       - name: pulling an image from ECR
         uses: appleboy/ssh-action@master
-        host: ${{ env.PUBLIC_SSH_KEY }}
-        username: siri
-        key: ${{ env.PRIVATE_SSH_KEY }}
-        script: |
+        with:
+         host: ${{ env.PUBLIC_SSH_KEY }}
+         username: siri
+         key: ${{ env.PRIVATE_SSH_KEY }}
+         script: |
             docker pull  $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
       
     
