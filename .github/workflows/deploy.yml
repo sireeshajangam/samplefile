@@ -58,10 +58,7 @@ jobs:
          username: ubuntu
          key: ${{ env.PRIVATE_SSH_KEY }}
          script: |
-          sudo apt update
-          sudo apt install docker.io -y 
-          sudo apt install awscli -y us-east-1);
-          sudo docker pull $REGISTRY/$REPOSITORY:$IMAGE_TAG
+           sudo docker pull $REGISTRY/$REPOSITORY:$IMAGE_TAG
          
     
      
