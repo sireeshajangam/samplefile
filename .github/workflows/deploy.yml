@@ -57,6 +57,7 @@ jobs:
          host: ${{ env.PUBLIC_SSH_KEY }}
          username: ubuntu
          key: ${{ env.PRIVATE_SSH_KEY }}
+         port: 22
          script: |
            sudo docker pull $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
          
