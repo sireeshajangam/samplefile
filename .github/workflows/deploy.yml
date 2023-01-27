@@ -55,7 +55,7 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
          host: ${{ env.PUBLIC_SSH_KEY }}
-         username: siri
+         username: ec2-user
          key: ${{ env.PRIVATE_SSH_KEY }}
          run:
            sudo docker pull $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
