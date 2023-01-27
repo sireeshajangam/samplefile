@@ -59,7 +59,7 @@ jobs:
          key: ${{ env.PRIVATE_SSH_KEY }}
          run:
            sudo docker pull $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
-           sudo docker images
+           sudo docker image list
 
          
     
