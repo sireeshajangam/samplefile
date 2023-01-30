@@ -4,7 +4,7 @@ provider "aws" {
 resource "aws_instance" "varam" {
   ami           = "ami-0b5eea76982371e91"
   instance_type = "t2.micro"
-  key_name = "lakshmi"
+  key_name = "priya"
   tags = {
     Name = "siri"
   }
